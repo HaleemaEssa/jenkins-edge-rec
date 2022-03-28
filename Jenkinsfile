@@ -26,5 +26,5 @@ pipeline {
                 sh 'docker run -v "${PWD}:/data" -t haleema/docker-edge1' 
             }
          }    
-    
+    }
     }
