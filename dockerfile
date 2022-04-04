@@ -1,5 +1,5 @@
 FROM python:3
-WORKDIR /usr/
+WORKDIR /usr/src/app
 COPY . .
 #########
 #########
