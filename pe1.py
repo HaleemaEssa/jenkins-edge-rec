@@ -98,8 +98,8 @@ if __name__ == '__main__':
         dff['Temperature']=dff['Temperature'].round(0).astype('int')
         print(dff)
         dff.to_csv('/data/data1.csv') #, index=False)
-        dff.flush
-        dff.close
+        //dff.flush
+        //dff.close
 
         
 #####        from pandas import read_csv
