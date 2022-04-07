@@ -54,32 +54,11 @@ def main():
 if __name__ == '__main__':
     try:
         main()
-    except:    
-        import pandas as pd
-        df=pd.read_csv("/data/data.csv")
-        df['Date']=pd.to_datetime(df['Date'])
-        print (type(df['Date'][0]))
-        print(df)
-        df.set_index('Date', inplace=True)
-        import numpy as np
-        df=df.replace({'Humidity':'0', 'Temperature':'0'},np.NaN)
-        df=df.interpolate()
-        df3=df.pivot_table(index=pd.Grouper(freq='T')) #.agg({'Sound':'sum','Flame':'sum'}) #,columns=['Humidity','Temperature']) #/// freq=S,T,h,M,Y
-        print(df3)
-        dff = df3.reindex(columns=['Sound','Flame','Humidity','Temperature'])
-        print(dff)
-        dff['Sound']=dff['Sound'].apply(np.ceil) #().astype('int')
-        dff['Sound']=dff['Sound'].astype('int')
-        dff['Flame']=dff['Flame'].apply(np.ceil) #().astype('int')
-        dff['Flame']=dff['Flame'].astype('int')
-        dff['Humidity']=dff['Humidity'].round(0).astype('int')
-        dff['Temperature']=dff['Temperature'].round(0).astype('int')
-        print(dff)
-        dff.to_csv('/data/data1.csv') #, index=False)
-        #dff.flush
-        #dff.close
-    #except SystemExit:
-       #     os._exit(0)    
+    except:
+        print ("done")
+        
+    except SystemExit:
+        os._exit(0)    
 
 #        val1,val2,val3,val4 =  main()
 #        f = open("/data/data.csv","a")
