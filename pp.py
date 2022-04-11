@@ -12,7 +12,7 @@ def main():
     f = open("/data/data.csv","a")
     if os.stat('/data/data.csv').st_size == 0:
         f.write("Date,Sound,Flame,Humidity,Temperature\n")
-    headerList = ['Date','Sound','Flame','Humidity','Temperature']
+    #headerList = ['Date','Sound','Flame','Humidity','Temperature']
     f = open('/data/data.csv', 'r+')
     
 
