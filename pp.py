@@ -12,8 +12,9 @@ def main():
     f = open("/data/data.csv","a")
     if os.stat('/data/data.csv').st_size == 0:
         f.write("Date,Sound,Flame,Humidity,Temperature\n")
-    f = open('/data/data.csv', 'r+')
     headerList = ['Date','Sound','Flame','Humidity','Temperature']
+    f = open('/data/data.csv', 'r+')
+    
 
 #    f.truncate(0) # need '0' when using r+
     credentials = pika.PlainCredentials('haleema', '4chyst')
