@@ -19,21 +19,24 @@ def main():
                                    '/',
                                    credentials)
 
-    connection = pika.BlockingConnection(parameters)
+    connection-s = pika.BlockingConnection(parameters)
+    connection-f = pika.BlockingConnection(parameters)
+    connection-dht = pika.BlockingConnection(parameters)
 
-    channel-s = connection.channel()
+
+    channel-s = connection-s.channel()
     channel-s.exchange_declare(exchange='logs-sound', exchange_type='fanout')
     result-s = channel-s.queue_declare(queue='', exclusive=True)
     queue_name = result-s.method.queue
     channel-s.queue_bind(exchange='logs-sound', queue=queue_name)
 
-    channel-f = connection.channel()
+    channel-f = connection-f.channel()
     channel-f.exchange_declare(exchange='logs-flame', exchange_type='fanout')
     result-f = channel-f.queue_declare(queue='', exclusive=True)
     queue_name = result-f.method.queue
     channel-f.queue_bind(exchange='logs-flame', queue=queue_name)
     
-    channel-dht = connection.channel()
+    channel-dht = connection-dht.channel()
     channel-dht.exchange_declare(exchange='logs-dht', exchange_type='fanout')
     result-dht = channel-dht.queue_declare(queue='', exclusive=True)
     queue_name = result-dht.method.queue
