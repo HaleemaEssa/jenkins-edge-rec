@@ -13,7 +13,7 @@ def main():
     if os.stat('/data/data.csv').st_size == 0:
         f.write("Date,Sound,Flame,Humidity,Temperature\n")
     #headerList = ['Date','Sound','Flame','Humidity','Temperature']
-    f = open('/data/data.csv', 'r+')
+    f = open('/data/data.csv', 'r')
     
 
 #    f.truncate(0) # need '0' when using r+
