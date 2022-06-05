@@ -35,7 +35,7 @@ def main():
     x=''
     h=''
     def callback(ch, method, properties, body): #for tem
-            #### 5-6 f = open("/data/data.csv","a")
+            f = open("/data/data.csv","a")
             print(datetime.today().strftime('%Y/%m/%d %H:%M:%S') + ":   received    "+ str( body)+"\n")
             m= body.decode()   
 #            print(str(m[0]),str(m[2]),str(m[4]),str(m[6]))
