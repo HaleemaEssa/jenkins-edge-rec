@@ -9,11 +9,11 @@ def main():
     with open('/data/data.csv', mode='a') as data:
         data_writer = csv.writer(data, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
     import pandas as pd
-    #####5-6 f = open("/data/data.csv","a")
+    f = open("/data/data.csv","a")
     if os.stat('/data/data.csv').st_size == 0:
         f.write("Date,Sound,Flame,Humidity,Temperature\n")
     #headerList = ['Date','Sound','Flame','Humidity','Temperature']
-    ####5-6 f = open('/data/data.csv', 'r') ###r+
+    f = open('/data/data.csv', 'r') ###r+
     
 
 #    f.truncate(0) # need '0' when using r+
