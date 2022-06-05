@@ -51,10 +51,10 @@ def main():
  #           ch.basic_ack(delivery_tag=method.delivery_tag)
 #    channel.basic_qos(prefetch_count=1)
     channel.basic_consume(queue=queue_name, on_message_callback=callback, auto_ack=True)
-    import pandas as pd-d
-    df-d= pd-d.read_csv("/data/data.csv", sep="\t or ,")
-    df-d.drop_duplicates(subset=None,inplace=True)
-    print(' [*] Waiting for messages. To exit press CTRL+C')
+    #import pandas as pd-d
+    #df-d= pd-d.read_csv("/data/data.csv", sep="\t or ,")
+    #df-d.drop_duplicates(subset=None,inplace=True)
+    print(' [*] Waiting for data')
     channel.start_consuming()
 if __name__ == '__main__':
     try:
