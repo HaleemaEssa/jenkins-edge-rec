@@ -9,11 +9,11 @@ def main():
     with open('/data/data.csv', mode='a') as data:
         data_writer = csv.writer(data, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
     import pandas as pd
-    f = open("/data/data.csv","a")
+    #####5-6 f = open("/data/data.csv","a")
     if os.stat('/data/data.csv').st_size == 0:
         f.write("Date,Sound,Flame,Humidity,Temperature\n")
     #headerList = ['Date','Sound','Flame','Humidity','Temperature']
-    f = open('/data/data.csv', 'r') ###r+
+    ####5-6 f = open('/data/data.csv', 'r') ###r+
     
 
 #    f.truncate(0) # need '0' when using r+
@@ -35,7 +35,7 @@ def main():
     x=''
     h=''
     def callback(ch, method, properties, body): #for tem
-            f = open("/data/data.csv","a")
+            #### 5-6 f = open("/data/data.csv","a")
             print(datetime.today().strftime('%Y/%m/%d %H:%M:%S') + ":   received    "+ str( body)+"\n")
             m= body.decode()   
 #            print(str(m[0]),str(m[2]),str(m[4]),str(m[6]))
