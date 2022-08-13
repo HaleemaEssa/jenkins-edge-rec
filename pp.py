@@ -18,7 +18,7 @@ def main():
 
 #    f.truncate(0) # need '0' when using r+
     credentials = pika.PlainCredentials('haleema', '4chyst')
-    parameters = pika.ConnectionParameters('192.168.0.126',
+    parameters = pika.ConnectionParameters('192.168.0.145',
                                    5672,
                                    '/',
                                    credentials)
